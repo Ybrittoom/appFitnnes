@@ -14,7 +14,6 @@ body {
     width: 100%;
     padding: 40px 60px;
     background-color: #000000;
-    min-height: 100vh;
     padding-bottom: 40px;
 }
 
@@ -34,8 +33,8 @@ body {
 
 .nexFitHeader h1 {
     font-size: 36px;
-    font-weight: 700px;
-    letter-spacing: -0.5px;
+    font-weight: 700px; /*peso da fonte*/
+    letter-spacing: -0.5px;/*espaçamento das letras*/
 }
 
 @media (max-width: 768px) {
@@ -68,3 +67,402 @@ body {
     margin-bottom: 24px;
     position: relative;
 }
+
+.secaoPassos {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.passosInfo h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+}
+
+.passosInfo p {
+    font-size: 16px;
+    color: #888888;
+    font-weight: 400;
+}
+
+.divProgressao {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.emblemaPorcentagem {
+    background-color: #5A189A;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.divBarraPorcentagem {
+    width: 180px;
+    height: 8px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preenchimentoBarraProgressao {
+    height: 100%;
+    background: linear-gradient(90deg, #2C096C 0%, #7B2CBF 100%);
+    border-radius: 10px;
+    width: 34%;
+}
+
+.secaoStatus {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listaStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.statIconePassos,
+.statIconeTempo,
+.statIconeCalorias {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.statIconePassos {
+    background-color: #5A189A;
+    color: #000000;
+}
+
+.statIconeTempo {
+    background-color: #3b82f6;
+    color: #000000;
+}
+
+.statIconeCalorias {
+    background-color: #ec4899;
+    color: #000000;
+}
+
+.statValor,
+.statValue {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.statLabel {
+    font-size: 16px;
+    color: #888888;
+}
+
+.secaoAtividadesFisicas {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 28px 20px;
+    margin-bottom: 24px;
+}
+
+.gradeAtividades {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .gradeAtividades {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+}
+
+.itemAtividade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.iconeAtividadeFisica {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.iconeAtividadeFisica:hover {
+    background-color: #333333;
+}
+
+.labelAtividade {
+    font-size: 13px;
+    color: #cccccc;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gradeDeSecoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+@media (max-width: 1024px) {
+    .gradeDeSecoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.secaoSono {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoSono {
+    flex: 1;
+}
+
+.sonoHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.iconeSono {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.horasSono {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.sonoLabel {
+    font-size: 16px;
+    color: #888888;
+}
+
+.tempoSono {
+    color: #6b7280;
+    font-size: 16px;
+}
+.sonoGrafico {
+    width: 200px;
+    height: 60px;
+    position: relative;
+}
+.barraSono {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+    border-radius: 8px;
+}
+.btnRegistrar {
+    background-color: #2a2a2a;
+    border: none;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 16px;
+}
+
+.btnRegistrar:hover {
+    background-color: #333333;
+}
+
+.secaoRefeicao {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoRefeicao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconeRefeicao {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.iconeRefeicao::before {
+    content: "🍴";
+}
+
+.refeicaoDetalhes h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.btnRefeicao {
+    background-color: #2a2a2a;
+    border: none;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btnRefeicao:hover {
+    background-color: #333333;
+}
+
+.progressoRefeicao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconeAjuda {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #374151;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.barraProgressaoRefeicao {
+    width: 140px;
+    height: 8px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.preenchimentoBarraRefeicao {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #f59e0b 100%);
+    border-radius: 10px;
+    width: 75%;
+}
+
+.secaoHidratacao {
+    background-color: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoHidratacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.iconeHidratacao {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.detalheHidratacao h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.detalheHidratacao p {
+    font-size: 14px;
+    color: #888888;
+}
+
+.barraProgressaoHidratacao {
+    width: 120px;
+    height: 8px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preenchimentoBarraHidratacao {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 10px;
+    width: 0%;
+}
+
