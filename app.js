@@ -1,18 +1,19 @@
 const express = require('express')
-const path = require('path') // Importe o módulo 'path'
-require('dotenv').config();
-
 const app = express()
-const { homeRoutes } = require("./src/routes/homeRoutes") // Assumindo uma rota para a Home
+require('dotenv').config()
+const PORT = process.env.PORT || 8081
+const path = require('path')
 
-const PORT = process.env.PORT || 3000 // Use uma porta padrão caso .env falhe
+const webRoutes = require("./src/routes/homeRoutes")
 
-app.use(express.json())
+//configuraçao da pasta public para servir arquivos estaticos
+app.use(express.static(path.join(__dirname, 'src', 'public')))
 
-app.use(express.static(path.join(__dirname, 'public'))); 
+app.use('/', webRoutes)
 
-app.use('/', homeRoutes)
 
+
+//rodando o servidor
 app.listen(PORT, () => {
-    console.log(` Servidor rodando em http://localhost:${PORT}`)
+    console.log(`Servidor rodando em http://localhost:${PORT}`)
 })
