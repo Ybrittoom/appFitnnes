@@ -5,5 +5,7 @@ const homeController = require("../controllers/homeController")
 
 router.get('/', homeController.mostrarSite)
 
+router.get('/exercicios', homeController.paginaExercicios)
+
 //exportando para q o app.js possa usar
 module.exports = router
