@@ -1,9 +1,9 @@
+//homeRoutes.js
 const express = require('express')
 const router = express.Router()
+const {homeController} = require("../controllers/homeController")
 
-const homeController = require("../controllers/homeController")
-
-router.get('/', homeController.mostrarSite)
+router.get('/nexFit', homeController.mostrarSite)
 
 router.get('/exercicios', homeController.paginaExercicios)
 

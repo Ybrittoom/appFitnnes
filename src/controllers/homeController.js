@@ -1,9 +1,18 @@
+//homeController.js
 const path = require('path')
 
-exports.mostrarSite = (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'))
-};
+const homeController = {
+    // mostrar a pagina principal
+    mostrarSite: async (req, res) => {
+        res.sendFile(path.join(__dirname,'..', 'views', 'index.html'))
+    },
 
-exports.paginaExercicios = (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'exercicios.html'))
+    paginaExercicios: async (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'views', 'exercicios.html'))
+    }
+
+}
+
+module.exports = {
+    homeController
 }
