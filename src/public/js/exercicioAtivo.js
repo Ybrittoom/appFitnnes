@@ -63,11 +63,26 @@ btnContinuar.addEventListener("click", () => {
 btnConcluir.addEventListener("click", () => {
     pausarContador()
 
-    alert("Exercico Concluido")
+    const secaoDeTreinoConcluido = document.getElementById('secaoDeTreinoConcluido')
+    secaoDeTreinoConcluido.style.display = "flex"
 
-    window.location.href = "/exercicios"
+    const botaoDeOk = document.getElementById('botaoDeOk')
+    botaoDeOk.addEventListener('click', () => {
+
+        window.location.href = "/exercicios"
+    })
+
 })
 
 btnVoltar.addEventListener('click', () => {
     window.location.href = "/exercicios"
 })
+
+
+//seçao das musicas
+function carregarMusica() {
+    const btnMusica = document.getElementById('btnMusica')
+    const modalPlayer = document.getElementById('modalPlayer')
+
+    modalPlayer.style.display = "Block"
+}

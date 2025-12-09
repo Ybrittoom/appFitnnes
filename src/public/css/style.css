@@ -51,6 +51,11 @@ body {
     gap: 20px;
 }
 
+.headerIcones a {
+    text-decoration: none;
+    color: white;
+}
+
 .iconBtn {
     background: none;
     border: none;
@@ -229,6 +234,11 @@ body {
 
 .iconeAtividadeFisica:hover {
     background-color: #333333;
+}
+
+.iconeAtividadeFisica a {
+    text-decoration: none;
+    color: white;
 }
 
 .labelAtividade {

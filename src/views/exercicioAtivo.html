@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/exercicioAtivo.css">
+    <link rel="stylesheet" href="/public/css/exercicioAtivo.css">
     <title>Exercicio - NexFit</title>
 </head>
+
 <body>
     <div class="container">
         <header class="headerExercicio">
             <button class="btnVoltar" id="btnVoltar">←</button>
             <h1 id="nomeExercicio">TITULO</h1>
             <div class="headerIcones">
-                <button class="iconBtn">♪</button>
+                <button class="iconBtn" id="btnMusica" onclick="carregarMusica()">♪</button>
                 <button class="iconBtn">🎧</button>
                 <button class="iconBtn">⋮</button>
             </div>
@@ -36,7 +38,33 @@
         </footer>
     </div>
 
-    <script src="../public/js/exercicioAtivo.js"></script>
-    
+    <!--SEÇAO DOS MODAIS -->
+
+    <section id="secaoDeTreinoConcluido" style="display: none;">
+        <span id="msgDetreinoConcluido">TREINAMENTO CONCLUIDO !</span>
+        <button id="botaoDeOk">OK</button>
+    </section>
+
+    <!--modal da musica-->
+    <section id="modalPlayer" style="display: none;">
+        <div class="playerHeader">
+            <h3>Tocando agora</h3>
+            <button class="btnFecharPlayer">×</button>
+        </div>
+        <div class="playerInfo">
+            <p class="nomeMusica">Nome da Música</p>
+            <p class="nomeArtista">Artista</p>
+        </div>
+        <div class="playerControles">
+            <button class="btnControle">⏮</button>
+            <button class="btnPlay">▶</button>
+            <button class="btnControle">⏭</button>
+        </div>
+    </section>
+
+
+    <script src="/public/js/exercicioAtivo.js"></script>
+
 </body>
+
 </html>

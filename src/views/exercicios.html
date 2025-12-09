@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/exercicios.css">
+    <link rel="stylesheet" href="/public/css/exercicios.css">
     <title>Meus Exercícios - NexFit</title>
 </head>
 
 <body>
     <div class="container">
         <header class="headerExercicios">
-            <button class="btnVoltar" id="btnVoltar"><-</button>
+            <button class="btnVoltar" id="btnVoltar">←</button>
             <h1>Meus exercícios</h1>
             <div class="headerIcones">
                 <button class="iconBtn">+</button>
@@ -131,10 +131,10 @@
     </div>
 
     <script>
-        const btnVoltar = document.getElementById('bntVoltar')
+        const btnVoltar = document.getElementById('btnVoltar')
 
         btnVoltar.addEventListener("click", () => {
-            window.location.href = "/index"
+            window.location.href = "/nexFit" //utilizar para a rota que esta sendo usada no homeRoutes.js(no caso)
         })
     </script>
 </body>
