@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="exercicios.css">
+    <link rel="stylesheet" href="../public/exercicios.css">
     <title>Meus Exercícios - NexFit</title>
 </head>
 
 <body>
     <div class="container">
         <header class="headerExercicios">
-            <button class="btnVoltar" onclick="window.location.href='/'">←</button>
+            <button class="btnVoltar" id="btnVoltar"><-</button>
             <h1>Meus exercícios</h1>
             <div class="headerIcones">
                 <button class="iconBtn">+</button>
@@ -27,7 +27,7 @@
                     <span class="iconeExercicio">🏃</span>
                     <span class="nomeExercicio">Corrida</span>
                     <div class="divBtnComecar">
-                        <a href="/" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Corrida" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela favorito">★</span>
                 </li>
@@ -35,7 +35,7 @@
                     <span class="iconeExercicio">🏋️‍♂️</span>
                     <span class="nomeExercicio">Supino</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Supino" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela favorito">★</span>
                 </li>
@@ -43,7 +43,7 @@
                     <span class="iconeExercicio">🚴</span>
                     <span class="nomeExercicio">Bicicleta</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Bicicleta" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela favorito">★</span>
                 </li>
@@ -58,7 +58,7 @@
                     <span class="iconeExercicio">💪</span>
                     <span class="nomeExercicio">Flexão de bíceps</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Flexão%20de%20Biceps" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -66,7 +66,7 @@
                     <span class="iconeExercicio">🏊‍♂️</span>
                     <span class="nomeExercicio">Nataçao</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Natacao" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -74,7 +74,7 @@
                     <span class="iconeExercicio">🦵</span>
                     <span class="nomeExercicio">Cadeira flexora</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Cadeira%20Flexora" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -82,7 +82,7 @@
                     <span class="iconeExercicio">🚶‍♂️</span>
                     <span class="nomeExercicio">Caminhada</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Caminhada" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -90,7 +90,7 @@
                     <span class="iconeExercicio">🏋️</span>
                     <span class="nomeExercicio">Barra fixa</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Barra%20Fixa" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -98,7 +98,7 @@
                     <span class="iconeExercicio">🚴</span>
                     <span class="nomeExercicio">Mountain bike</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Mountain%20bike" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -106,7 +106,7 @@
                     <span class="iconeExercicio">🏋️</span>
                     <span class="nomeExercicio">Agachamentos</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Agachamentos" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -114,7 +114,7 @@
                     <span class="iconeExercicio">💪</span>
                     <span class="nomeExercicio">Flexão de braços</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Flexão%20de%20bracos" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
@@ -122,13 +122,21 @@
                     <span class="iconeExercicio">🏃</span>
                     <span class="nomeExercicio">Abdominais curtos</span>
                     <div class="divBtnComecar">
-                        <a href="" class="btnComecar">Começar</a>
+                        <a href="/exercicio/ativo?nome=Abdominais%20curtos" class="btnComecar">Começar</a>
                     </div>
                     <span class="estrela">☆</span>
                 </li>
             </ol>
         </section>
     </div>
+
+    <script>
+        const btnVoltar = document.getElementById('bntVoltar')
+
+        btnVoltar.addEventListener("click", () => {
+            window.location.href = "/index"
+        })
+    </script>
 </body>
 
 </html>

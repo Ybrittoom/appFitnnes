@@ -7,7 +7,7 @@ const path = require('path')
 const webRoutes = require("./src/routes/homeRoutes")
 
 //configuraçao da pasta public para servir arquivos estaticos
-app.use(express.static(path.join(__dirname, 'src', 'public')))
+app.use('/public', express.static(path.join(__dirname, 'src', 'public')))
 
 app.use('/', webRoutes)
 
